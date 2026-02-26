@@ -95,8 +95,12 @@ detection:
             - '\ZscLib.dll'
     filter_zillya:
         ImageLoaded|startswith:
-	        - 'C:\Program Files\Zillya Antivirus\'
+            - 'C:\Program Files\Zillya Antivirus\'
             - 'C:\Program Files (x86)\Zillya Antivirus\'
+            - 'C:\Program Files\Zillya Total Security\
+            - 'C:\Program Files (x86)\Zillya Total Security\'
+            - 'C:\Program Files\Ovron Total Security\'
+            - 'C:\Program Files (x86)\Ovron Total Security\l
     condition: (selection_bitdefender and not 1 of filter_log_dll_*)
                or (selection_fsecure and not filter_fsecure)
                or (selection_mcafee and not filter_mcafee)
